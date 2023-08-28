@@ -10,9 +10,9 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./listing.component.css']
 })
 export class ListingComponent implements OnInit {
-  currentTab: string = ''; // Initialize with an empty string
+  currentTab: string = ''; 
   loadedPosts: (Post | PostNajava | PostZajednica | PostKultura | PostSport | PostPrivreda | PostVideo | 
-    PostDailyphoto | PostPress | PostIntervju | PostTbn | PostPanoramica | PostSearch)[] = []; // Use union type for flexibility
+    PostDailyphoto | PostPress | PostIntervju | PostTbn | PostPanoramica | PostSearch)[] = []; 
 
   constructor(private http: HttpClient, private route: ActivatedRoute) {}
 
@@ -20,7 +20,7 @@ export class ListingComponent implements OnInit {
     
     this.fetchPosts();
       this.route.url.subscribe(segments => {
-      this.currentTab = segments[0].path; // Store the current tab
+      this.currentTab = segments[0].path; 
 
     });
   }
@@ -31,7 +31,7 @@ export class ListingComponent implements OnInit {
 
   private fetchPosts() {
     this.route.url.subscribe(segments => {
-      const section = segments[0].path; // Get the first segment of the URL (e.g., "latest" or "najava")
+      const section = segments[0].path; 
       const apiUrl = `https://www.subotica.info/restful-${section}`;
   
       this.http.get<any>(apiUrl).subscribe(responseData => {
