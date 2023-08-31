@@ -1,0 +1,78 @@
+    .navbar-left {
+    flex: 2;
+    text-align: left;
+  }
+  
+  .navbar-icon {
+    flex: 2;
+    text-align: center;
+  }
+  
+  .navbar-right {
+    flex: 2;
+    text-align: right;
+  }
+
+/* .redImg{
+  flex: 1;
+  } */
+
+.cont{
+  
+    justify-content: space-between;
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 80px;
+    display: flex;
+    align-items: center;   
+    color: white;
+
+}
+
+.details-content { 
+    max-height:100%;
+    overflow-y:auto;
+    display:inline-block;
+    position: fixed;
+    top: 0;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    z-index: 2;
+  }
+/* img{
+  -moz-box-shadow:inset 0px 0px 3px 1px rgba(0,0,0,1);
+  -webkit-box-shadow:inset 0px 0px 3px 1px rgba(0,0,0,1);
+  box-shadow:inset 0px 0px 3px 1px rgba(0,0,0,1);
+} */
+.KatDate{
+    margin: 10px;
+    display: flex; /*  THIS IS WHATS INPORTANT */
+}
+
+.Kat{
+  flex: 1;
+  text-align: left;
+}
+
+.Date{
+  flex: 1;
+  text-align: right;
+}
+
+.names{
+  border-radius: 15px 15px 15px 15px ;
+  width: max-content;
+  padding: 5px;
+  background-color: lightgrey;
+  margin: 0;
+}
+.items{
+  margin: 10px;
+    display: flex; /*  THIS IS WHATS IMPORTANT */
+}
+.text{
+word-wrap: break-word;
+
+}
