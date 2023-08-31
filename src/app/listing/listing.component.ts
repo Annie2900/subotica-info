@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Post, PostNajava, PostZajednica, PostKultura, PostSport, PostPrivreda, PostVideo, PostDailyphoto, PostPress, PostIntervju, PostTbn, PostPanoramica, PostSearch } from './post.model';
+import { Post, PostNajava, PostZajednica, PostKultura, PostSport, PostPrivreda, PostVideo, PostDailyphoto, PostPress, PostIntervju, PostTbn, PostPanoramica } from './post.model';
 import { map } from 'rxjs/operators';
 
 @Component({
@@ -12,12 +12,12 @@ import { map } from 'rxjs/operators';
 export class ListingComponent implements OnInit {
   currentTab: string = ''; 
   loadedPosts: (Post | PostNajava | PostZajednica | PostKultura | PostSport | PostPrivreda | PostVideo | 
-    PostDailyphoto | PostPress | PostIntervju | PostTbn | PostPanoramica | PostSearch)[] = []; 
+    PostDailyphoto | PostPress | PostIntervju | PostTbn | PostPanoramica )[] = []; 
 
   constructor(private http: HttpClient, private route: ActivatedRoute) {}
 
   ngOnInit() {
-    
+
     this.fetchPosts();
       this.route.url.subscribe(segments => {
       this.currentTab = segments[0].path; 
@@ -35,6 +35,7 @@ export class ListingComponent implements OnInit {
       const apiUrl = `https://www.subotica.info/restful-${section}`;
   
       this.http.get<any>(apiUrl).subscribe(responseData => {
+        // console.log(responseData);
         if (section === 'latest') {
           this.loadedPosts = responseData.nodes as Post[];
         } 
@@ -71,12 +72,10 @@ export class ListingComponent implements OnInit {
         else if (section === 'panoramica') {
           this.loadedPosts = responseData.nodes as PostPanoramica[];
         }
-        else if (section === 'search') {
-          this.loadedPosts = responseData.nodes as PostSearch[];
-        }
-        console.log(this.loadedPosts);
+        // console.log('Request URL:', apiUrl);
+        // console.log(this.loadedPosts);
       });
     });
   }
-  
+
 }
