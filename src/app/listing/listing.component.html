@@ -3,87 +3,16 @@
 
 
 <!-- <div class="box" > -->
-  <ul class="list-group" *ngIf="loadedPosts.length >= 1" >
+  <ul class="list-group" *ngIf="loadedPosts.length >= 1">
     <div class="box2">
-    <li class="list-group-item" *ngFor="let post of loadedPosts" style="padding:0; box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); margin: 0.6em; border-radius: 7px;">
-      <ng-container *ngIf="currentTab === 'latest'">
-        <img *ngIf="post.node['Vodeca slika']" [src]="post.node['Vodeca slika']" alt="Image" >
-        <h4>{{ post.node['Naslov'] }}</h4>
-        <h8 class="box">{{ post.node['Sadrzaj clanka'] }}</h8>
-        <p style="font-size: 10px;">{{ post.node['Post date'] }}</p>
-      </ng-container>
-      <ng-container *ngIf="currentTab === 'najava'">
-        <img *ngIf="post.node['Vodeca slika']" [src]="post.node['Vodeca slika']" alt="Image" >
-        <h4>{{ post.node['Naslov'] }}</h4>
-        <h8 class="box">{{ post.node['Sadrzaj clanka'] }}</h8>
-        <p style="font-size: 10px;">{{ post.node['Post date'] }}</p>
-      </ng-container>
-      <ng-container *ngIf="currentTab === 'zajednica'">
-        <img *ngIf="post.node['Vodeca slika']" [src]="post.node['Vodeca slika']" alt="Image" >
-        <h4>{{ post.node['Naslov'] }}</h4>
-        <h8 class="box">{{ post.node['Sadrzaj clanka'] }}</h8>
-        <p style="font-size: 10px;">{{ post.node['Post date'] }}</p>
-      </ng-container>
-      <ng-container *ngIf="currentTab === 'kultura'">
-        <img *ngIf="post.node['Vodeca slika']" [src]="post.node['Vodeca slika']" alt="Image" >
-        <h4>{{ post.node['Naslov'] }}</h4>
-        <h8 class="box">{{ post.node['Sadrzaj clanka'] }}</h8>
-        <p style="font-size: 10px;">{{ post.node['Post date'] }}</p>
-      </ng-container>
-      <ng-container *ngIf="currentTab === 'sport'">
-        <img *ngIf="post.node['Vodeca slika']" [src]="post.node['Vodeca slika']" alt="Image" >
-        <h4>{{ post.node['Naslov'] }}</h4>
-        <h8 class="box">{{ post.node['Sadrzaj clanka'] }}</h8>
-        <p style="font-size: 10px;">{{ post.node['Post date'] }}</p>
-      </ng-container>
-      <ng-container *ngIf="currentTab === 'panoramica'">
-        <img *ngIf="post.node['Vodeca slika']" [src]="post.node['Vodeca slika']" alt="Image" >
-        <h4>{{ post.node['Naslov'] }}</h4>
-        <h8 class="box">{{ post.node['Sadrzaj clanka'] }}</h8>
-        <p style="font-size: 10px;">{{ post.node['Post date'] }}</p>
-      </ng-container>
-      <ng-container *ngIf="currentTab === 'privreda'">
-        <img *ngIf="post.node['Vodeca slika']" [src]="post.node['Vodeca slika']" alt="Image" >
-        <h4>{{ post.node['Naslov'] }}</h4>
-        <h8 class="box">{{ post.node['Sadrzaj clanka'] }}</h8>
-        <p style="font-size: 10px;">{{ post.node['Post date'] }}</p>
-      </ng-container>
-      <ng-container *ngIf="currentTab === 'video'">
-        <img *ngIf="post.node['Vodeca slika']" [src]="post.node['Vodeca slika']" alt="Image" >
-        <h4>{{ post.node['Naslov'] }}</h4>
-        <h8 class="box">{{ post.node['Sadrzaj clanka'] }}</h8>
-        <p style="font-size: 10px;">{{ post.node['Post date'] }}</p>
-      </ng-container>
-      <ng-container *ngIf="currentTab === 'dailyphoto'">
-        <img *ngIf="post.node['Vodeca slika']" [src]="post.node['Vodeca slika']" alt="Image" >
-        <h4>{{ post.node['Naslov'] }}</h4>
-        <h8 class="box">{{ post.node['Sadrzaj clanka'] }}</h8>
-        <p style="font-size: 10px;">{{ post.node['Post date'] }}</p>
-      </ng-container>
-      <ng-container *ngIf="currentTab === 'press'">
-        <img *ngIf="post.node['Vodeca slika']" [src]="post.node['Vodeca slika']" alt="Image" >
-        <h4>{{ post.node['Naslov'] }}</h4>
-        <h8 class="box">{{ post.node['Sadrzaj clanka'] }}</h8>
-        <p style="font-size: 10px;">{{ post.node['Post date'] }}</p>
-      </ng-container>
-      <ng-container *ngIf="currentTab === 'intervju'">
-        <img *ngIf="post.node['Vodeca slika']" [src]="post.node['Vodeca slika']" alt="Image" >
-        <h4>{{ post.node['Naslov'] }}</h4>
-        <h8 class="box">{{ post.node['Sadrzaj clanka'] }}</h8>
-        <p style="font-size: 10px;">{{ post.node['Post date'] }}</p>
-      </ng-container>
-      <ng-container *ngIf="currentTab === 'tbn'">
-        <img *ngIf="post.node['Vodeca slika']" [src]="post.node['Vodeca slika']" alt="Image" >
-        <h4>{{ post.node['Naslov'] }}</h4>
-        <h8 class="box">{{ post.node['Sadrzaj clanka'] }}</h8>
-        <p style="font-size: 10px;">{{ post.node['Post date'] }}</p>
-      </ng-container>
-      <ng-container *ngIf="currentTab === 'search'">
-        <img *ngIf="post.node['Vodeca slika']" [src]="post.node['Vodeca slika']" alt="Image" >
-        <h4>{{ post.node['Naslov'] }}</h4>
-        <h8 class="box">{{ post.node['Sadrzaj clanka'] }}</h8>
-        <p style="font-size: 10px;">{{ post.node['Post date'] }}</p>
-      </ng-container>
-    </li></div>
+      <li class="list-group-item" *ngFor="let post of loadedPosts" style="padding:0; box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); margin: 0.6em; border-radius: 7px;">
+        <a [routerLink]="['/details', currentTab, post.node.Nid]" style="color:black;">
+          <img *ngIf="post.node['Vodeca slika']" [src]="post.node['Vodeca slika']" alt="Image" >
+          <h4>{{ post.node['Naslov'] }}</h4>
+          <h8 class="box">{{ post.node['Sadrzaj clanka'] }}</h8>
+          <p style="font-size: 10px;">{{ post.node['Post date'] }}</p>
+        </a>
+      </li>
+    </div>
   </ul>
 <!-- </div> -->
