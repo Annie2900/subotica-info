@@ -172,18 +172,3 @@ export interface Post {
   'Tip': string;
   'Vodeca slika': string;
   'id'?: string;}
-
-  export interface PostSearch {
-  'Article URL': string;
-  'Datum događaja': string;
-  'Kategorija': string;
-  'Live sadrzaj': string;
-  'Naslov': string;
-  'Nid': string;
-  'Post date': string;
-  'Sadrzaj clanka': string;
-  'Tagovi': string;
-  'Tip': string;
-  'Vodeca slika': string;
-  'id'?: string;} 
-  
